@@ -1,3 +1,6 @@
+# Ignore mypy artifacts
+.mypy_cache/
+
 # Ignore all notebooks by default
 notebooks/**/*.ipynb
 
