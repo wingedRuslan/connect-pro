@@ -1,3 +1,13 @@
+# Ignore all notebooks by default
+notebooks/**/*.ipynb
+
+# But track specific example notebooks
+!notebooks/intro.ipynb
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
 # Python
 __pycache__/
 *.py[cod]
