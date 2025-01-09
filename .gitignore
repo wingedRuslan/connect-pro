@@ -1,3 +1,8 @@
+# Ignore legacy 
+legacy/
+
+.DS_Store
+
 # Ignore mypy artifacts
 .mypy_cache/
 
