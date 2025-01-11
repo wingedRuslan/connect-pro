@@ -1,0 +1,548 @@
+{
+    "public_identifier":"ruslanyermakov",
+    "profile_pic_url":"https://media.licdn.com/dms/image/v2/D4E03AQFPh03ZFYS3sg/profile-displayphoto-shrink_200_200/B4EZP9.Lv.GwAc-/0/1735132757410?e=1741824000&v=beta&t=WLWjVYPdTlXIkNJhUTOFI03chCZmLUm4xZwDBPxLLQo",
+    "background_cover_image_url":"None",
+    "first_name":"Ruslan",
+    "last_name":"Yermakov",
+    "full_name":"Ruslan Yermakov",
+    "follower_count":1021,
+    "occupation":"Data Scientist at IBM",
+    "headline":"Data Scientist - AI/ML Solution Engineering",
+    "summary":"• Obtained practical experience while majoring in Data Science • Background in machine learning, natural language understanding and generative AI • Open to new areas and learning new technologies. Taking every opportunity to improve and gain more  • Strong decision-making and problem-solving skills • Excellent communication skills\n\nMost of all, I love to see my work benefit others.",
+    "country":"DE",
+    "country_full_name":"Germany",
+    "city":"Berlin Metropolitan Area",
+    "state":"None",
+    "experiences":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":9,
+             "year":2023
+          },
+          "ends_at":"None",
+          "company":"IBM",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/ibm",
+          "company_facebook_profile_url":"None",
+          "title":"Data Scientist",
+          "description":"None",
+          "location":"Berlin, Germany",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/ibm/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=274251f2707689a2fefcd1917ac1450384007d5f4ad00dfa1070aadd6b67122e"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":6,
+             "year":2022
+          },
+          "ends_at":{
+             "day":31,
+             "month":10,
+             "year":2022
+          },
+          "company":"Amazon",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/amazon",
+          "company_facebook_profile_url":"None",
+          "title":"Research Scientist Intern",
+          "description":"Alexa AI - Natural Language Understanding\n\n• Researched, implemented, and tested a data optimization method to decrease the total training dataset size by 67% with a key metric degradation of just 0.19% in Natural Language Understanding (NLU) tasks\n• Reduced the NLU model training time by x3 times, decreasing the associated computation costs\n• Automatically detected and fixed 86% of labelling errors in the training dataset",
+          "location":"Berlin, Germany",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/amazon/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=2709cb46ea0ecd965b3f0c62631f5acacab0214a0659a78416ebfd731ab477fa"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":10,
+             "year":2020
+          },
+          "ends_at":{
+             "day":31,
+             "month":3,
+             "year":2021
+          },
+          "company":"Bayer",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/bayer",
+          "company_facebook_profile_url":"None",
+          "title":"Research Scientist Intern",
+          "description":"• Developed proof of concept system to automatically generate fact-based text by fine-\ntuning T5, BART language models on a proprietary dataset\n• Designed and created a new dataset for benchmarking biomedical data-to-text models\n• Augmented dataset with Named Entity Recognition by using Amazon Medical\nComprehend, Stanford Stanza and BioBERT models\n• Published paper “Biomedical Data to Text Generation via Fine Tuning Transformers” at the 14th International Conference on Natural Language Generation, Association for Computational Linguistics (ACL) anthology",
+          "location":"Berlin, Germany",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/bayer/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=f5fa5c551261a6817cff947847359a5d6518eb5f30b35bb8c42d1230d966010d"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":5,
+             "year":2019
+          },
+          "ends_at":{
+             "day":31,
+             "month":8,
+             "year":2019
+          },
+          "company":"International Neuroinformatics Coordinating Facility (INCF)",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/incf-org",
+          "company_facebook_profile_url":"None",
+          "title":"Software Engineer (Google Summer of Code)",
+          "description":"• Accepted as a Google Summer of Code (GSoC) student to contribute to the open-source project \"scona\" - toolkit to analyze brain networks (MRI data) using python \n• Developed command-line tool in Python with a strong emphasis on providing clear documentation and maintaining high test coverage\n• Implemented visualization module and data analysis module using seaborn, NetworkX",
+          "location":"None",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/incf-org/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=a1520668e6f84c40b30ef9ae2cc46ce41704d04cc8a9baffb4fd6eed4d8d4bd9"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":3,
+             "year":2018
+          },
+          "ends_at":{
+             "day":30,
+             "month":9,
+             "year":2018
+          },
+          "company":"SAP",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/sap",
+          "company_facebook_profile_url":"None",
+          "title":"Software Engineer Intern",
+          "description":"Software engineer intern at SAP HANA Vora department, Big Data Vora team.\n\n• Designed and implemented new components in Python for connecting Google Pub Sub Service and Google BigQuery Service with SAP Big Data platform",
+          "location":"Walldorf, Germany",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/sap/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=61c5d7c27d492fab9a56e1988f06606bcb9d784c07940d7f8d3e45d3c2314039"
+       }
+    ],
+    "education":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2019
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2022
+          },
+          "field_of_study":"Data Science",
+          "degree_name":"Master of Science - MS",
+          "school":"RWTH Aachen University",
+          "school_linkedin_profile_url":"https://www.linkedin.com/company/9790/",
+          "school_facebook_profile_url":"None",
+          "description":"MSc thesis - \"Identifying the advantageous latent space dimensionality for StyleGANs used in industrial machine vision applications\" (1.7)\n\nThe degree focuses on the topics of data analysis, machine learning, artificial intelligence, and theoretical mathematics. The specialization area I have chosen is Applied Computer Science and within it I have focused on Machine (Deep) Learning, Computer Vision and Image Processing, with both theoretical mathematics courses and applications in software labs.",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/rwth-aachen-university/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=b6724c443ab08fd3424c55ab0d8ac973170ee344ee300dea80f81c965bb6dcd1",
+          "grade":"1.8",
+          "activities_and_societies":"None"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2015
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2019
+          },
+          "field_of_study":"Computer Science",
+          "degree_name":"Bachelor of Science - BS",
+          "school":"Sumy State University",
+          "school_linkedin_profile_url":"https://www.linkedin.com/company/1257361/",
+          "school_facebook_profile_url":"None",
+          "description":"Awarded an enhanced monthly stipend for the exceptional academic performance among 45 students. ",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/sumy-state-university/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=8e9e0e1090616ff3217cf473f59bd3f3fdb333a4db23c2e4074861c516361135",
+          "grade":"5.0 / 5.0",
+          "activities_and_societies":"None"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2017
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2018
+          },
+          "field_of_study":"Web Science",
+          "degree_name":"Exchange Semester",
+          "school":"University of Koblenz and Landau",
+          "school_linkedin_profile_url":"https://www.linkedin.com/company/15249278/",
+          "school_facebook_profile_url":"None",
+          "description":"Erasmus semester in Germany. Courses taken:\n- Machine Learning and Data Mining  \n- Introduction to Web Science\n- Web Engineering\n- Entrepreneurship",
+          "logo_url":"https://s3.us-west-000.backblazeb2.com/proxycurl/company/universitat-koblenz-landau/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20250107%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20250107T084300Z&X-Amz-Expires=1800&X-Amz-SignedHeaders=host&X-Amz-Signature=4a8ad02443ed82f897490dd261f9f740b6faac7e665fafa9f3d9ec440fc4bce2",
+          "grade":"None",
+          "activities_and_societies":"None"
+       }
+    ],
+    "languages":[
+       "English",
+       "German",
+       "Ukrainian"
+    ],
+    "languages_and_proficiencies":[
+       {
+          "name":"English",
+          "proficiency":"FULL_PROFESSIONAL"
+       },
+       {
+          "name":"German",
+          "proficiency":"PROFESSIONAL_WORKING"
+       },
+       {
+          "name":"Ukrainian",
+          "proficiency":"NATIVE_OR_BILINGUAL"
+       }
+    ],
+    "accomplishment_organisations":[
+       
+    ],
+    "accomplishment_publications":[
+       {
+          "name":"Identifying the advantageous latent space dimensionality for StyleGANs used in industrial machine vision applications",
+          "publisher":"SPIE, AI and Optical Data Sciences IV",
+          "published_on":{
+             "day":15,
+             "month":3,
+             "year":2023
+          },
+          "description":"This work presents an evaluation framework to assess the capabilities of generative models to learn the features and characteristics of the original data consistently and reliably. Feature consistency is proposed as an evaluation criterium to estimate the performance of the generative models. The quality of generated images is quantitatively evaluated, with a focus on determining how the latent space size affects the outcome. Latent space size systematically varied during training on industrially relevant datasets with representative features. Based on the application-specific and human-interpretable features, the image quality of multiple StyleGANs with varying latent space dimensionalities is compared using statistical tests to select the most favorable latent space dimension.",
+          "url":"https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12438/124380R/Identifying-the-advantageous-latent-space-dimensionality-for-StyleGANs-used-in/10.1117/12.2646326.short?SSO=1"
+       },
+       {
+          "name":"Biomedical Data-to-Text Generation via Fine-Tuning Transformers",
+          "publisher":"Association for Computational Linguistics (ACL)",
+          "published_on":{
+             "day":20,
+             "month":9,
+             "year":2021
+          },
+          "description":"Abstract: \nData-to-text (D2T) generation in the biomedical domain is a promising - yet mostly unexplored - field of research. Here, we apply neural models for D2T generation to a real-world dataset consisting of package leaflets of European medicines. We show that fine-tuned transformers are able to generate realistic, multi-sentence text from data in the biomedical domain, yet have important limitations. We also release a new dataset (BioLeaflets) for benchmarking D2T generation models in the biomedical domain.",
+          "url":"https://aclanthology.org/2021.inlg-1.40/"
+       }
+    ],
+    "accomplishment_honors_awards":[
+       
+    ],
+    "accomplishment_patents":[
+       
+    ],
+    "accomplishment_courses":[
+       
+    ],
+    "accomplishment_projects":[
+       
+    ],
+    "accomplishment_test_scores":[
+       {
+          "name":"TOEFL iBT",
+          "score":"103/120",
+          "date_on":{
+             "day":1,
+             "month":8,
+             "year":2018
+          },
+          "description":"The score corresponds to the C1 level of the CEFR (Common European Framework of Reference)"
+       },
+       {
+          "name":"TestDaF",
+          "score":"16/20",
+          "date_on":{
+             "day":1,
+             "month":2,
+             "year":2018
+          },
+          "description":"The score of the \"Test of German as a foreign language\" corresponds to the B2 level of the Common European Framework of Reference (CEFR)"
+       }
+    ],
+    "volunteer_work":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":10,
+             "year":2019
+          },
+          "ends_at":"None",
+          "title":"Speakers Team",
+          "cause":"Education",
+          "company":"TEDxRWTHAachen",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/10670689/",
+          "description":"• Responsible for creating content of the TEDx event in Aachen, Germany\n• Communication with speakers and preparation of the talks and presentations",
+          "logo_url":"https://media.licdn.com/dms/image/v2/C4E0BAQGKToeZgtXc_w/company-logo_400_400/company-logo_400_400/0/1651100861303/tedxrwthaachen_logo?e=1744243200&v=beta&t=mxavt7wj0bI5SzGtPq1AN63eOYGHIuArSz2TTp_E8Rs"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":3,
+             "year":2019
+          },
+          "ends_at":{
+             "day":31,
+             "month":5,
+             "year":2019
+          },
+          "title":"Tutor",
+          "cause":"Science And Technology",
+          "company":"Sumy State University",
+          "company_linkedin_profile_url":"https://www.linkedin.com/company/1257361/",
+          "description":"Programming classes for freshmen\n• organized programming classes (2 times a week) attended by 10-15 students;\n• introduced the basics of the programming language C;",
+          "logo_url":"https://media.licdn.com/dms/image/v2/C4E0BAQHyScrwUSIuIw/company-logo_400_400/company-logo_400_400/0/1630629144828/sumy_state_university_logo?e=1744243200&v=beta&t=UITE5-D3mr9UdTFhxtGjSRh6X73ZYgf4CEC2MfoEkg0"
+       }
+    ],
+    "certifications":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":2018
+          },
+          "ends_at":"None",
+          "name":"From Data to Insights with Google Cloud Platform Specialization",
+          "license_number":"None",
+          "display_source":"None",
+          "authority":"Google",
+          "url":"None"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":8,
+             "year":2018
+          },
+          "ends_at":{
+             "day":31,
+             "month":8,
+             "year":2020
+          },
+          "name":"TOEFL iBT",
+          "license_number":"33635349",
+          "display_source":"None",
+          "authority":"ETS Global B.V.",
+          "url":"None"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":9,
+             "year":2019
+          },
+          "ends_at":"None",
+          "name":"Machine Learning",
+          "license_number":"5Y6445S6ZG2J",
+          "display_source":"coursera.org",
+          "authority":"Coursera",
+          "url":"https://www.coursera.org/account/accomplishments/verify/5Y6445S6ZG2J"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2020
+          },
+          "ends_at":"None",
+          "name":"Neural Networks and Deep Learning",
+          "license_number":"None",
+          "display_source":"coursera.org",
+          "authority":"Coursera",
+          "url":"https://coursera.org/share/ac21f87d543c54bc3ec4cc74b87d33d6"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":3,
+             "year":2020
+          },
+          "ends_at":"None",
+          "name":"Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization",
+          "license_number":"None",
+          "display_source":"coursera.org",
+          "authority":"Coursera",
+          "url":"https://coursera.org/share/f05607dea8efcaf0c13e66bdd752c610"
+       }
+    ],
+    "connections":1004,
+    "people_also_viewed":[
+       {
+          "link":"https://de.linkedin.com/in/rebecca-cress",
+          "name":"Rebecca Cress",
+          "summary":"RTL Interactive | Business Trainee @ Bertelsmann Future Leaders Program",
+          "location":"Köln"
+       },
+       {
+          "link":"https://de.linkedin.com/in/cosima-gulde",
+          "name":"Cosima Gulde",
+          "summary":"Innovation Consultant @Arvato Systems | Bertelsmann | LSE",
+          "location":"Hamburg"
+       },
+       {
+          "link":"https://de.linkedin.com/in/laurena-patti-1931011a8",
+          "name":"Laurena Patti",
+          "summary":"Studentin Wirtschaftspsychologie",
+          "location":"Bielefeld"
+       },
+       {
+          "link":"https://de.linkedin.com/in/jordicasanellas",
+          "name":"Jordi Casanellas",
+          "summary":"Principal Data Scientist at Bayer",
+          "location":"Berlin"
+       },
+       {
+          "link":"https://de.linkedin.com/in/angeloziletti",
+          "name":"Angelo Ziletti",
+          "summary":"PhD | Principal Data Scientist at Bayer Pharmaceuticals",
+          "location":"Metropolregion Berlin/Brandenburg"
+       },
+       {
+          "link":"https://de.linkedin.com/in/talabazazo",
+          "name":"Tala Bazazo",
+          "summary":"Data Science Master's Student at RWTH Aachen University",
+          "location":"Städteregion Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/mohamed-alaa-abdelwahab-601593166",
+          "name":"Mohamed Alaa Abdelwahab",
+          "summary":"Data science Master Student at RWTH Aachen",
+          "location":"Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/steffi-heldberg-351027a",
+          "name":"Steffi Heldberg",
+          "summary":"Program Manager Corporate Management Development at Bertelsmann",
+          "location":"Bielefeld und Umgebung"
+       },
+       {
+          "link":"https://de.linkedin.com/in/sparsh-jauhari",
+          "name":"Sparsh Jauhari",
+          "summary":"MSc. Data Science at RWTH  University Aachen",
+          "location":"Dresden"
+       },
+       {
+          "link":"https://de.linkedin.com/in/dr-marion-c-legler-b389a7150",
+          "name":"Dr. Marion C. Legler",
+          "summary":"Head of Decision Science & Advanced Analytics for Medical Affairs, Pharmacovigilance & Regulatory Affairs @ Bayer",
+          "location":"Deutschland"
+       },
+       {
+          "link":"https://de.linkedin.com/in/devika-jalgaonkar-453100151",
+          "name":"Devika Jalgaonkar",
+          "summary":"M.Sc. Data Science | RWTH Aachen University",
+          "location":"Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/minakhalid",
+          "name":"Mina Khalid",
+          "summary":"Machine Learning Intern at Bosch | Masters in Data Science at RWTH Aachen University",
+          "location":"Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/mahmoud-emarah-b76bb782",
+          "name":"Mahmoud Emarah",
+          "summary":"Data Science Master's Student at RWTH Aachen university, Germany",
+          "location":"Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/ilkim-canoler-g%C3%B6z%C3%BC-3332835b",
+          "name":"Ilkim Canoler-Gözü",
+          "summary":"Software Developer (Data Integration and Analysis) at KISTERS AG | MSc in Data Analytics and Decision Science at RWTH Aachen",
+          "location":"Aachen"
+       },
+       {
+          "link":"https://de.linkedin.com/in/giuseppebonaccorso",
+          "name":"Giuseppe Bonaccorso",
+          "summary":"VP, Head of Data Science | AI & ML Author | Keynote Speaker | AI Thought Leader | #DataScienceEclecticism",
+          "location":"Berlin"
+       },
+       {
+          "link":"https://lu.linkedin.com/in/johannes-herforth",
+          "name":"Johannes Herforth",
+          "summary":"Studying Data Science MSc at RWTH Aachen",
+          "location":"Luxemburg"
+       },
+       {
+          "link":"https://ch.linkedin.com/in/gregorheusser",
+          "name":"Gregor Heusser",
+          "summary":"Consultant at McKinsey & Company",
+          "location":"Zürich, Schweiz"
+       },
+       {
+          "link":"https://de.linkedin.com/in/rishikmani",
+          "name":"Rishik Mani",
+          "summary":"Kunstelliches Intelligenz | Maschinelles Lernen | Data Science | Python | C# | ASP.NET | SQL | JavaScript",
+          "location":"Bielefeld"
+       },
+       {
+          "link":"https://in.linkedin.com/in/prathibha-palla-6a865786",
+          "name":"Prathibha Palla",
+          "summary":"Machine Learning Engineer at Concentrix",
+          "location":"Bengaluru"
+       }
+    ],
+    "recommendations":[
+       "Angelo Ziletti\n\n\n\nI had the pleasure to work with Ruslan on a Natural Language Generation (NLG) project in healthcare for six months. His positive attitude and high degree of professionalism made our collaboration both pleasant and fruitful. \nRuslan has a growth mindset and persists in the face of setbacks. He independently took care of key responsibilities across different aspects of the AI project and delivered outstanding results in both research and engineering tasks. Thanks to his work, we were able to publish in a top NLG conference.\nRuslan is clearly a talented asset and I can highly recommend him as a self-driven, and resilient data scientist.\n"
+    ],
+    "activities":[
+       {
+          "title":"Transformers have mostly replaced RNNs, such as LSTMs, on tasks that involve sequential data. There are several reasons for their success.First…",
+          "link":"https://www.linkedin.com/signup/cold-join",
+          "activity_status":"Beliebt bei Ruslan Yermakov"
+       },
+       {
+          "title":"Checkout our latest work \"Latent Image Animator: Learning to Animate Images via Latent Space Navigation\"Yaohui Wang, Di YANG, Francois…",
+          "link":"https://www.linkedin.com/signup/cold-join",
+          "activity_status":"Beliebt bei Ruslan Yermakov"
+       },
+       {
+          "title":"🤗 Text-generation method now has a guide 🦮 Chan Woo Kim has done an incredible job at adding constrained beam-search generation to 🤗…",
+          "link":"https://www.linkedin.com/signup/cold-join",
+          "activity_status":"Beliebt bei Ruslan Yermakov"
+       }
+    ],
+    "similarly_named_profiles":[
+       {
+          "name":"Ruslan Yermakov",
+          "link":"https://al.linkedin.com/in/ruslan-yermakov-01a4551a4",
+          "summary":"Ranch Manager at Hooters of America",
+          "location":"Albanien"
+       },
+       {
+          "name":"Ruslan Yermakov",
+          "link":"https://ua.linkedin.com/in/ruslan-yermakov-892289161",
+          "summary":"--",
+          "location":"Ukraine"
+       },
+       {
+          "name":"Ruslan Yermakov",
+          "link":"https://by.linkedin.com/in/ruslan-yermakov-b80090126",
+          "summary":"Lead Software Engineer in Test at EPAM Systems",
+          "location":"Belarus"
+       }
+    ],
+    "articles":[
+       
+    ],
+    "groups":[
+       {
+          "profile_pic_url":"https://media.licdn.com/dms/image/v2/C4E07AQGTHW_uLnkf2w/group-logo_image-shrink_400x400/group-logo_image-shrink_400x400/0/1631007724620?e=1736845200&v=beta&t=ZPB1IMzKvfk5PH_IaBIgm36q6mVPNUz9u9VR5l9Voe4",
+          "name":"Talent Meets Bertelsmann - Global Community",
+          "url":"https://www.linkedin.com/groups/8136356"
+       },
+       {
+          "profile_pic_url":"https://media.licdn.com/dms/image/v2/C4E07AQGZo9LMA10nHg/group-logo_image-shrink_48x48/group-logo_image-shrink_48x48/0/1553006182854?e=1736845200&v=beta&t=93xXDEcmvuYm2L8-c18ta50ZrA6MlINLKKNJEdGiFU8",
+          "name":"IBM Client Engineering",
+          "url":"https://www.linkedin.com/groups/12220929"
+       }
+    ],
+    "skills":[
+       
+    ],
+    "inferred_salary":"None",
+    "gender":"None",
+    "birth_date":"None",
+    "industry":"None",
+    "extra":"None",
+    "interests":[
+       
+    ],
+    "personal_emails":[
+       
+    ],
+    "personal_numbers":[
+       
+    ]
+ }
