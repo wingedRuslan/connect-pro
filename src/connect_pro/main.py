@@ -4,13 +4,15 @@ from LinkedIn profiles through automated search and analysis.
 """
 
 from typing import Dict
+
 from dotenv import load_dotenv
 
 from connect_pro.agent.linkedin_profile_agent import LinkedInProfileAgent
 from connect_pro.config.settings import settings
-from connect_pro.scrapers.linkedin.proxycurl import LinkedInClient
 from connect_pro.llm.models import get_openai_llm
 from connect_pro.prompts.profile_analysis import profile_analysis_prompt
+from connect_pro.schemas.profile_insights import ProfileInsights, profile_parser
+from connect_pro.scrapers.linkedin.proxycurl import LinkedInClient
 
 
 def generate_profile_insights(
@@ -37,18 +39,21 @@ def generate_profile_insights(
             return None
 
         # Scrape profile data
-        profile_data = LinkedInClient().get_profile(linkedin_profile_url=profile_url, mock=True)
+        profile_data = LinkedInClient().get_profile(
+            linkedin_profile_url=profile_url, mock=True
+        )
         if not profile_data:
             raise ValueError(f"Could not scrape profile data from {profile_url}")
 
         # Generate insights
         llm = get_openai_llm(temperature=0)
-        chain = profile_analysis_prompt | llm
-        result = chain.invoke(input={"information": profile_data})
+        chain = profile_analysis_prompt | llm | profile_parser
+
+        insights: ProfileInsights = chain.invoke(input={"information": profile_data})
 
         return {
             "profile_url": profile_url, 
-            "insights": result.content
+            "insights": insights.to_dict()
         }
 
     except Exception as e:
