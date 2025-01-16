@@ -1,0 +1,438 @@
+{
+    "public_identifier":"chiphuyen",
+    "first_name":"Chip",
+    "last_name":"Huyen",
+    "full_name":"Chip Huyen",
+    "follower_count":254727,
+    "occupation":"Community Committee at MLOps Learners",
+    "headline":"Building something new | AI x storytelling",
+    "summary":"I'm Chip Huyen, a writer and computer scientist. I'm building infrastructure or real-time ML. I also teach Machine Learning Systems Design at Stanford.\n\nPreviously, I was with Snorkel AI, NVIDIA, Netflix, Primer, Baomoi.com (acquired by VNG). I helped launch Coc Coc - Vietnam’s second most popular web browser with 20+ million monthly active users.\n\nIn my free time, I travel and write. After high school, I went to Brunei for a 3-day vacation which turned into a 3-year trip through Asia, Africa, and South America. During my trip, I worked as a Bollywood extra, a casino hostess, and a street performer.\n\nI’m the author of four bestselling Vietnamese books. I’m working on an English book on machine learning interviews.",
+    "country":"US",
+    "country_full_name":"United States of America",
+    "city":"San Francisco",
+    "state":"California",
+    "experiences":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":9,
+             "year":2021
+          },
+          "company":"MLOps Learners",
+          "title":"Community Committee",
+          "description":"Learning and sharing best practices for ML production from this amazing community!"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2024
+          },
+          "ends_at":{
+             "day":31,
+             "month":10,
+             "year":2024
+          },
+          "company":"Voltron Data",
+          "title":"VP of AI & OSS",
+          "description":"Voltron Data's mission is to make data processing cheap, fast, and easy on GPUs. We believe in a future where any company should be able to leverage any hardware and any data platform for their needs. We contribute to and maintain open source projects around open data standards and formats, including Apache Arrow, Flight, Ibis, and Substrait."
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":11,
+             "year":2021
+          },
+          "ends_at":{
+             "day":31,
+             "month":1,
+             "year":2024
+          },
+          "company":"Claypot AI",
+          "title":"Co-Founder",
+          "description":"Acquired by Voltron Data"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2021
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2023
+          },
+          "company":"Stanford University",
+          "title":"Adjunct Lecturer",
+          "description":"A new course focusing on machine learning systems design (cs329s.stanford.edu)"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":12,
+             "year":2019
+          },
+          "ends_at":{
+             "day":28,
+             "month":2,
+             "year":2021
+          },
+          "company":"Snorkel AI",
+          "title":"ML Engineer & Open Source Lead",
+          "description":"Snorkel Flow is an end-to-end platform that focuses on a revolutionary new programmatic approach to labeling, building, and managing training datasets, enabling a new level of rapid, iterative development and deployment of AI applications."
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":10,
+             "year":2018
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2019
+          },
+          "company":"NVIDIA",
+          "title":"Senior Deep Learning Engineer",
+          "description":"Bringing the latest AI research into production. First new hire on AI Apps team.",
+          "location":"California"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":2018
+          },
+          "ends_at":{
+             "day":30,
+             "month":9,
+             "year":2018
+          },
+          "company":"NVIDIA",
+          "title":"Deep Learning Engineer Intern",
+          "description":"Contributed to OpenSeq2Seq."
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2017
+          },
+          "ends_at":{
+             "day":31,
+             "month":3,
+             "year":2018
+          },
+          "company":"Stanford University",
+          "title":"Instructor",
+          "description":"I proposed, wrote the syllabus for, and taught the course CS 20SI: \"TensorFlow for Deep Learning Research\".",
+          "location":"United States"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":6,
+             "year":2017
+          },
+          "ends_at":{
+             "day":30,
+             "month":9,
+             "year":2017
+          },
+          "company":"Netflix",
+          "title":"Research Assistant",
+          "description":"I work on a research project to explore different approaches for machine translation.",
+          "location":"Los Gatos"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":3,
+             "year":2015
+          },
+          "ends_at":{
+             "day":30,
+             "month":6,
+             "year":2017
+          },
+          "company":"Stanford University",
+          "title":"Section Leader",
+          "description":"Teaching weekly 50-minute sections, grading programming assignments, and holding weekly helper hours. \n\nContent taught included but not limited to: \nCS106A: basic Java syntax and data structures, Object-Oriented software architectures, \nInteractors and Graphic User Interfaces.\nCS106B: basic C++ syntax and data structures, recursion, complexity evaluation, pointer arithmetic, implementation of data structures such as trees and priority queues, graph search algorithms.",
+          "location":"United States"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":2016
+          },
+          "ends_at":{
+             "day":30,
+             "month":9,
+             "year":2016
+          },
+          "company":"Primer.ai",
+          "title":"Machine Learning Intern",
+          "description":"Primer is an NLP startup with a team of less than 10 people. Its clients consist of Fortune 50 companies and government agencies. My job is to implement papers to evaluate if the technologies can be used for the company's products.",
+          "location":"San Francisco"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":6,
+             "year":2016
+          },
+          "ends_at":{
+             "day":31,
+             "month":7,
+             "year":2016
+          },
+          "company":"The University of Edinburgh",
+          "title":"Research Assistant, School of Informatics",
+          "description":"I work with Professor Adam Lopez's research group. Our goal is to build machine learning systems that can predict the meaning of an input sentence, or predict a sentence from the meaning representation. The data that we work with is Abstract Meaning Representation (AMR).",
+          "location":"Edinburgh, United Kingdom"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2016
+          },
+          "ends_at":{
+             "day":31,
+             "month":5,
+             "year":2016
+          },
+          "company":"Stanford University and Boeing",
+          "title":"Research Assistant, Artificial Intelligence Lab",
+          "description":"Working on a project that aims to create a control system that allows a robot to perform automatic programmed operations for mundane tasks in a confined space, such as the wing of a Boeing aircraft.\n\nMy part is to implement SLAM (Simultaneous localization and mapping): a program that detects and maps static objects in the surrounding environment so that the robot can keep track of its location within it.\n",
+          "location":"United States"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":6,
+             "year":2015
+          },
+          "ends_at":{
+             "day":31,
+             "month":8,
+             "year":2015
+          },
+          "company":"Stanford University",
+          "title":"Research Assistant, Astronautics Department",
+          "description":"Implementing object detection schemes using minimal computational resources to assist on-board satellite pose estimation.\n       Input: 2D images of a non-communicating object in space. \n       Output: velocity and direction in which the object is traveling.\n       Method: detect landmark and spatial features then match these features with those of a 3D model of an aircraft.\n",
+          "location":"United States"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":2012
+          },
+          "ends_at":{
+             "day":31,
+             "month":3,
+             "year":2013
+          },
+          "company":"Cốc Cốc",
+          "title":"Creative Director",
+          "description":"Led market research & product management for Cốc Cốc browser, Vietnam’s 2nd most popular browser with 20M monthly active users. Cốc Cốc is the biggest Vietnamese digital advertising publisher. During my time there, it had 400+ employees.",
+          "location":"Vietnam"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":6,
+             "year":2009
+          },
+          "ends_at":{
+             "day":30,
+             "month":6,
+             "year":2012
+          },
+          "company":"Free Hugs Vietnam (FHV)",
+          "title":"Founder",
+          "description":"FHV is a non-profit organization that:\n-\tprovides volunteering opportunities with international organizations for Vietnamese students to help them improve English.\n-\torganizes workshops, competitions, and speaker series for Vietnamese students.\n-\tprovides assistance to NGOs and international volunteer groups when they come to Vietnam.\n"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2009
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2010
+          },
+          "company":"InvestVietnam",
+          "title":"Editor & Community Manager",
+          "description":"Managed the online community for Vietnam’s largest start-up community with 80,000 members.",
+          "location":"Vietnam"
+       }
+    ],
+    "education":[
+       {
+          "field_of_study":"Computer Science",
+          "degree_name":"Master’s Degree",
+          "school":"Stanford University"
+       },
+       {
+          "field_of_study":"Computer Science",
+          "degree_name":"Bachelor's Degree",
+          "school":"Stanford University",
+          "activities_and_societies":"Creative Writing Group, CS198 Section Leading Community"
+       }
+    ],
+    "languages":[
+       "English",
+       "French",
+       "Spanish",
+       "Vietnamese"
+    ],
+    "languages_and_proficiencies":[
+       {
+          "name":"English",
+          "proficiency":"FULL_PROFESSIONAL"
+       },
+       {
+          "name":"French",
+          "proficiency":"LIMITED_WORKING"
+       },
+       {
+          "name":"Spanish",
+          "proficiency":"PROFESSIONAL_WORKING"
+       },
+       {
+          "name":"Vietnamese",
+          "proficiency":"NATIVE_OR_BILINGUAL"
+       }
+    ],
+    "accomplishment_honors_awards":[
+       {
+          "title":"Ericsson Innovation Awards ' Regional Winner",
+          "issuer":"Ericsson Innovation Awards ",
+          "issued_on":{
+             "day":1,
+             "month":12,
+             "year":2017
+          },
+          "description":"Judges' favorite in Americas. Top 15 out of 1,444 projects worldwide."
+       },
+       {
+          "title":"Snap Inc. Research Scholar",
+          "issuer":"Snap Inc.",
+          "issued_on":{
+             "day":1,
+             "month":12,
+             "year":2017
+          },
+          "description":"US$10,000 scholarships awarded to outstanding undergraduate or Master’s students in computer science and related areas. \n\n"
+       },
+       {
+          "title":"FAHASA’s Top 10 Reader’s Choice Books in 2014",
+          "issuer":"None",
+          "issued_on":{
+             "day":1,
+             "month":1,
+             "year":2014
+          },
+          "description":"For both of my books"
+       },
+       {
+          "title":"Author of the 3rd and 9th best-selling book of the year 2013 on Tiki.vn",
+          "issuer":"None",
+          "issued_on":{
+             "day":1,
+             "month":1,
+             "year":2013
+          },
+          "description":"For my second and first book respectively"
+       },
+       {
+          "title":"Author of the best-selling book of the year 2012 on Tiki.vn",
+          "issuer":"None",
+          "issued_on":{
+             "day":1,
+             "month":1,
+             "year":2012
+          },
+          "description":"For my first book"
+       },
+       {
+          "title":"Winner of Techcombank's Essay Contest",
+          "issuer":"Techcombank",
+          "issued_on":{
+             "day":1,
+             "month":12,
+             "year":2011
+          },
+          "description":"None"
+       }
+    ],
+    "accomplishment_courses":[
+       {
+          "name":"Artificial Intelligence: Principles and Techniques",
+          "number":"CS221"
+       },
+       {
+          "name":"Computer Organization and Systems",
+          "number":"CS107"
+       },
+       {
+          "name":"Design and Analysis of Algorithms",
+          "number":"CS161"
+       },
+       {
+          "name":"Introduction to Cryptography",
+          "number":"CS255"
+       },
+       {
+          "name":"Introduction to Probability for Computer Scientists",
+          "number":"CS109"
+       },
+       {
+          "name":"Introduction to Robotics",
+          "number":"CS223A"
+       },
+       {
+          "name":"Machine Learning (CS229)",
+          "number":"CS229"
+       },
+       {
+          "name":"Mathematical Foundations of Computing",
+          "number":"CS103"
+       },
+       {
+          "name":"Principles of Computer Systems",
+          "number":"CS110"
+       },
+       {
+          "name":"Programming Abstractions (Accelerated)",
+          "number":"CS106X"
+       }
+    ],
+    "connections":23031,
+    "recommendations":[
+       "Phuong Luu Quy\n\n\n\nYou'll never know what she hides behind her smile if you don't give her a trial. Trust me, she will surprise you. She has a dedicated heart to finish what she has decided to do. And above all, she loves what she does. To me, that's the most important thing a successful person need.",
+       "Hung Nguyen\n\n\n\nChip was evangelist for our Project. She did it well."
+    ],
+    "similarly_named_profiles":[
+       {
+          "name":"Chip Huyen",
+          "link":"https://vn.linkedin.com/in/chip-huyen-0b75a0128",
+          "summary":"Student at University of finance and marketing",
+          "location":"Vietnam"
+       }
+    ],
+    "groups":[
+       {
+          "name":"Python Developers Community (moderated)"
+       },
+       {
+          "name":"Accelerating Innovation with A/B Testing Alumni Group"
+       }
+    ]
+ }

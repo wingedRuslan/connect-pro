@@ -1,0 +1,361 @@
+{
+    "public_identifier":"yann-lecun",
+    "first_name":"Yann",
+    "last_name":"LeCun",
+    "full_name":"Yann LeCun",
+    "follower_count":882316,
+    "occupation":"VP & Chief AI Scientist at Meta at Facebook",
+    "headline":"VP & Chief AI Scientist at Meta",
+    "summary":"Professor, researcher, and R&D manager with academic and industry experience in AI, machine learning, deep learning, computer vision, intelligent data analysis, data mining, data compression,  digital library systems, and robotics.\n\nSpecialties: research, technical consulting, scientific advising.",
+    "country":"US",
+    "country_full_name":"United States",
+    "city":"New York",
+    "state":"New York",
+    "experiences":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":10,
+             "year":2021
+          },
+          "company":"Facebook",
+          "title":"VP & Chief AI Scientist at Meta",
+          "location":"New York, New York, United States"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":9,
+             "year":2003
+          },
+          "company":"New York University",
+          "title":"Professor",
+          "description":"Silver Professor of Computer Science, Courant Institute of Mathematical Sciences (since 2006)\nProfessor of Neural Science, NYU Center for Neural Science (since 2007)\nProfessor of Electrical and Computer Engineering, NYU School of Engineering (since 2011)\nProfessor of Data Science, NYU Center for Data Science (since 2013)\nFounding Director of the NYU Center for Data Science (since 2013)\n\nResearch and teaching in machine learning, AI, data science, computer vision, robotics, computational neuroscience, and knowledge extraction from data,",
+          "location":"Greater New York City Area"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":2012
+          },
+          "company":"Element Inc",
+          "title":"Co-founder, Advisor",
+          "description":"Elements develops software-based biometric authentication technology.\n",
+          "location":"New York City"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":3,
+             "year":2018
+          },
+          "ends_at":{
+             "day":31,
+             "month":10,
+             "year":2021
+          },
+          "company":"Facebook",
+          "title":"VP & Chief AI Scientist",
+          "description":"Scientific and technical leadership at Facebook AI Research, AI R&D strategy.",
+          "location":"Greater New York City Area"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":12,
+             "year":2013
+          },
+          "ends_at":{
+             "day":28,
+             "month":2,
+             "year":2018
+          },
+          "company":"Facebook",
+          "title":"Director of AI Research",
+          "description":"Director of Facebook AI Research (FAIR), with research locations in Menlo Park, New York City, and Paris, focused on bringing about major advances in AI.\n\nProfessor at NYU on a part-time basis (since January 2014).\n\nCofounder and advisor of Elements Inc. (biometrics), and Museami (music technology)",
+          "location":"Greater New York City Area"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2007
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2016
+          },
+          "company":"MuseAmi",
+          "title":"Cofounder and Chief Scientist",
+          "description":"Development of innovative software and hardware technology for, music production, music education, and musical entertainment. Products includes mobile apps such as Improvox, Hook'd and MusicPal.",
+          "location":"Greater New York City Area"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2008
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":2013
+          },
+          "company":"YLC Consulting LLC",
+          "title":"Owner",
+          "description":"Research, Development, and Technology Consulting in software, machine learning, machine vision, robotics, data mining, data modeling, statistical data analysis, OCR, data compression, music technology and related topics ."
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":2002
+          },
+          "ends_at":{
+             "day":31,
+             "month":8,
+             "year":2003
+          },
+          "company":"NEC Research Institute",
+          "title":"Fellow",
+          "description":"Research in machine learning and computer vision.",
+          "location":"Princeton, NJ"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1996
+          },
+          "ends_at":{
+             "day":31,
+             "month":1,
+             "year":2002
+          },
+          "company":"AT&T Labs Research",
+          "title":"Department Head",
+          "description":"Head of the Image Processing Research Department.\n\nDirected research in machine learning, pattern recognition, image compression, video compression, animated characters. Department members included Yoshua Bengio, Leon Bottou, Eric Cosatto, Hans-Peter Graf, Patrick Haffner, Fu Jie Huang, Jörn Ostermann, Patrice Simard, Vladimir Vapnik,",
+          "location":"Middletown, NJ"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":10,
+             "year":1988
+          },
+          "ends_at":{
+             "day":31,
+             "month":1,
+             "year":1996
+          },
+          "company":"AT&T Bell Laboratories",
+          "title":"research staff member",
+          "description":"Carried out research in machine learning, neural nets, optical character recognition, handwriting recognition, signature verification, integrated circuits for pattern recogntiion, and other topics.",
+          "location":"Holmdel, NJ"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1988
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1996
+          },
+          "company":"Bell Labs",
+          "title":"Research Staff Member"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1988
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1996
+          },
+          "company":"Bell Laboratories",
+          "title":"Research staff member"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1991
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1991
+          },
+          "company":"THALES - Laboratoire Central de Recherche",
+          "title":"research scientist"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1987
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1988
+          },
+          "company":"University of Toronto",
+          "title":"Research Associate (postdoc)",
+          "description":"postdoc in the Geoff Hinton's lab in the Department of Computer Science."
+       }
+    ],
+    "education":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1983
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1987
+          },
+          "field_of_study":"Computer Science",
+          "degree_name":"PhD",
+          "school":"Pierre and Marie Curie University"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":1,
+             "year":1978
+          },
+          "ends_at":{
+             "day":31,
+             "month":12,
+             "year":1983
+          },
+          "field_of_study":"Electrical and Electronics Engineering",
+          "degree_name":"Engineering Diploma",
+          "school":"ESIEE PARIS"
+       }
+    ],
+    "accomplishment_publications":[
+       {
+          "name":"Feature Learning and Deep Architectures: New Directions for Music Informatics",
+          "publisher":"Journal of Intelligent Information Systems / Springer",
+          "published_on":{
+             "day":1,
+             "month":12,
+             "year":2013
+          },
+          "description":"None",
+          "url":"http://link.springer.com/article/10.1007/s10844-013-0248-5"
+       },
+       {
+          "name":"Moving Beyond Feature Design: Deep Architectures and Automatic Feature Learning in Music Informatics",
+          "publisher":"Proc. of the International Society of Music Information Retrieval (ISMIR) 2012",
+          "published_on":{
+             "day":24,
+             "month":10,
+             "year":2012
+          },
+          "description":"None",
+          "url":"http://ismir2012.ismir.net/event/papers/403-ismir-2012.pdf"
+       },
+       {
+          "name":"Predictive network modeling of the high-resolution dynamic plant transcriptome in response to nitrate",
+          "publisher":"Genome Biology",
+          "published_on":{
+             "day":1,
+             "month":1,
+             "year":2010
+          },
+          "description":"None",
+          "url":"None"
+       },
+       {
+          "name":"Classification of patterns of EEG synchronization for seizure prediction",
+          "publisher":"Clinical Neurophysiology",
+          "published_on":{
+             "day":1,
+             "month":1,
+             "year":2009
+          },
+          "description":"None",
+          "url":"None"
+       },
+       {
+          "name":"Comparing SVM and convolutional networks for epileptic seizure prediction from intracranial EEG",
+          "publisher":"IEEE Workshop on Machine Learning for Signal Processing",
+          "published_on":{
+             "day":1,
+             "month":10,
+             "year":2008
+          },
+          "description":"None",
+          "url":"None"
+       }
+    ],
+    "accomplishment_projects":[
+       {
+          "starts_at":{
+             "day":1,
+             "month":9,
+             "year":2006
+          },
+          "ends_at":{
+             "day":30,
+             "month":6,
+             "year":2008
+          },
+          "title":"LAGR",
+          "description":"LAGR was a DARPA competition in autonomous vision-based off-road robot navigation. Nine labs competed in many races through complex off-road terrain over the course of 3 years. In the first year, our team achieved the competition's 3-year goal of improving the baseline run-time by a factor of 2, forcing the government to up the goal to a factor of 3. \n\nUsing visual input for navigation is essential in unstructured outdoor environments, which can cause simpler sensors such as GPS, odometry, and laser scanners to drift severely or become unusably noisy. As an alternative to such sensors, I contributed a novel, fast form of visual odometry. Our efficient “hybrid visual odometry” method used 5% of the CPU time, in contrast to full VO methods which require an entire CPU. Despite this, it maintained comparable accuracy to full VO over diverse terrain types. This makes it particularly suitable for consumer robots, extraterrestrial rovers, and other platforms with limited computing power. \n\nThis contribution was described in the ICRA 2009 paper Efficient Off-Road Localization Using Visually Corrected Odometry, and contributed to our JFR 2009 paper, A Multi-Range Architecture for Collision-Free Off-Road Robot Navigation.",
+          "url":"http://www.cs.nyu.edu/~yann/research/lagr/index.html"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":4,
+             "year":1997
+          },
+          "ends_at":{
+             "day":31,
+             "month":1,
+             "year":2002
+          },
+          "title":"DjVu",
+          "description":"DjVu (pronounced \"déjà vu\") is a digital document format with advanced compression technology.\n\nI initiated and directed the project.",
+          "url":"http://djvu.org"
+       },
+       {
+          "starts_at":{
+             "day":1,
+             "month":7,
+             "year":1991
+          },
+          "ends_at":{
+             "day":30,
+             "month":4,
+             "year":1996
+          },
+          "title":"Check Recognition with Deep Learning",
+          "description":"The first practical system for reading the amount on bank checks.\nIt was deployed by NCR first in ATM machines in 1995, then in high-speed check reading machines in 1996. At some point in the late 90's these systems read an estimated 10 to 20% of all the checks in the US.\n\nIt used a convolutional neural net, combined with a so-called graph-transformer network, a form of non conditional random field in which the solution space can be represented by a treillis.\n ",
+          "url":"http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf"
+       }
+    ],
+    "connections":1366,
+    "groups":[
+       {
+          "name":"satellite-image-deep-learning"
+       },
+       {
+          "name":"MPAI Group (Moving Picture, Audio and Data Coding by Artificial Intelligence)"
+       }
+    ]
+ }
