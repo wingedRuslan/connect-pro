@@ -68,7 +68,7 @@ def main():
 
     print("\n=== LinkedIn Profile Analyzer ===\n")
 
-    search_query = "Ruslan Yermakov IBM"
+    search_query = "Ruslan Yermak IBM"
 
     try:
         result = generate_profile_insights(search_query=search_query, verbose=True)
