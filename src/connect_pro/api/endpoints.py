@@ -1,7 +1,11 @@
+
+from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
 
 from connect_pro.api.schemas import SearchQuery, ProfileResponse
 from connect_pro.main import generate_profile_insights
+
+load_dotenv()
 
 router = APIRouter()
 
