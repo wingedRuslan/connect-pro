@@ -1,68 +1,147 @@
+/* Basic reset and container */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #0077b5;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .error {
-    color: red;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #ffe6e6;
-    border-radius: 4px;
-  }
-  
-  .result {
-    margin-top: 30px;
-  }
-  
-  .result h2 {
-    margin: 20px 0 10px;
-  }
-  
-  .result ul {
-    padding-left: 20px;
-  }
-  
-  .result a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #0077b5;
-    text-decoration: none;
-  }
-  
-  .result a:hover {
-    text-decoration: underline;
-  }
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+/* Form styling */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077b5;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005582;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error message */
+.error {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Results section */
+.result {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.result h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin: 20px 0 15px;
+}
+
+.result p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4a5568;
+}
+
+.result ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.result li {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.result li:before {
+  content: "•";
+  color: #0077b5;
+  position: absolute;
+  left: 8px;
+}
+
+.result a {
+  display: inline-block;
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 8px 0;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}

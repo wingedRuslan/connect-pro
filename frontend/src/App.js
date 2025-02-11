@@ -45,10 +45,17 @@ function App() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Enter name, company, position..."
+          placeholder="Enter name, company, position (e.g., John Smith Software Engineer Google)"
         />
         <button type="submit" disabled={loading || !query.trim()}>
-          {loading ? 'Analyzing...' : 'Analyze'}
+          {loading ? (
+            <>
+              <span className="spinner"></span>
+              Analyzing...
+            </>
+          ) : (
+            'Analyze'
+          )}
         </button>
       </form>
 
@@ -70,7 +77,7 @@ function App() {
           </ul>
           
           <a href={result.profile_url} target="_blank" rel="noopener noreferrer">
-            View LinkedIn Profile
+            View LinkedIn Profile →
           </a>
         </div>
       )}
