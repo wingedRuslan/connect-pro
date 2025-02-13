@@ -146,3 +146,32 @@ button:disabled {
 .result a:hover {
   text-decoration: underline;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.search-input,
+.personal-info-input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.search-input:focus,
+.personal-info-input:focus {
+  outline: none;
+  border-color: #0077b5;
+}
+
+.personal-info-input {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}

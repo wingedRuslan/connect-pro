@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [query, setQuery] = useState('');
+  const [userInfo, setUserInfo] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -20,11 +21,14 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ 
+          query,
+          user_information: userInfo 
+        }),
       });
       
       if (!response.ok) {
-        throw new Error('Failed to analyze profile');
+        throw new Error('Failed to analyze Linkedin profile');
       }
       
       const data = await response.json();
@@ -41,22 +45,34 @@ function App() {
       <h1>LinkedIn Profile Analyzer</h1>
       
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Enter name, company, position (e.g., John Smith Software Engineer Google)"
-        />
-        <button type="submit" disabled={loading || !query.trim()}>
-          {loading ? (
-            <>
-              <span className="spinner"></span>
-              Analyzing...
-            </>
-          ) : (
-            'Analyze'
-          )}
-        </button>
+        <div className="form-group">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Enter name, company, position (e.g., John Smith Software Engineer Google)"
+            className="search-input"
+          />
+          
+          <textarea
+            value={userInfo}
+            onChange={(e) => setUserInfo(e.target.value)}
+            placeholder="Enter your personal information (optional)"
+            className="personal-info-input"
+            rows={4}
+          />
+          
+          <button type="submit" disabled={loading || !query.trim()}>
+            {loading ? (
+              <>
+                <span className="spinner"></span>
+                Analyzing...
+              </>
+            ) : (
+              'Analyze'
+            )}
+          </button>
+        </div>
       </form>
 
       {error && <div className="error">{error}</div>}
@@ -75,6 +91,13 @@ function App() {
               <li key={index}>{fact}</li>
             ))}
           </ul>
+
+          {result.common_ground && (
+            <>
+              <h2>Common Ground</h2>
+              <p>{result.common_ground}</p>
+            </>
+          )}
           
           <a href={result.profile_url} target="_blank" rel="noopener noreferrer">
             View LinkedIn Profile →
