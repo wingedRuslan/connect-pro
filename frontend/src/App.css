@@ -28,8 +28,7 @@ form {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 30px;
-  display: flex;
-  gap: 10px;
+  width: 100%;
 }
 
 input {
@@ -154,6 +153,7 @@ button:disabled {
   width: 100%;
 }
 
+/* Input fields */
 .search-input,
 .personal-info-input {
   padding: 12px;
@@ -162,6 +162,7 @@ button:disabled {
   font-size: 16px;
   transition: border-color 0.3s;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .search-input:focus,
@@ -171,7 +172,9 @@ button:disabled {
 }
 
 .personal-info-input {
-  resize: vertical;
+  resize: none;  /* Disable manual resize */
+  overflow-y: hidden; /* Hide scrollbar */
   min-height: 100px;
   font-family: inherit;
 }
+

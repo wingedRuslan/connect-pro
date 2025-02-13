@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -7,6 +7,21 @@ function App() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const textAreaRef = useRef(null);
+
+  // Auto-resize textarea
+  const adjustTextAreaHeight = () => {
+    const textarea = textAreaRef.current;
+    if (textarea) {
+      textarea.style.height = 'inherit';
+      textarea.style.height = `${textarea.scrollHeight}px`;
+    }
+  };
+
+  // Adjust height when content changes
+  useEffect(() => {
+    adjustTextAreaHeight();
+  }, [userInfo]);
 
   // API Call Logic
   const handleSubmit = async (e) => {
@@ -55,11 +70,11 @@ function App() {
           />
           
           <textarea
+            ref={textAreaRef}
             value={userInfo}
             onChange={(e) => setUserInfo(e.target.value)}
             placeholder="Enter your personal information (optional)"
             className="personal-info-input"
-            rows={4}
           />
           
           <button type="submit" disabled={loading || !query.trim()}>
