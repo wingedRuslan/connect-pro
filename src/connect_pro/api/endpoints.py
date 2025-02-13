@@ -20,7 +20,11 @@ async def analyze_profile(search_query: SearchQuery):
         
         if not result:
             raise HTTPException(status_code=404, detail="Profile not found")
-            
+
+        # Add common_ground to result if user_information is provided
+        if search_query.user_information:
+            result["common_ground"] = search_query.user_information
+        
         return ProfileResponse(**result)
         
     except Exception as e:
