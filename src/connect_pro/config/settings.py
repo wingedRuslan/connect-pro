@@ -11,6 +11,10 @@ class Settings(BaseSettings):
 
     # Other settings with defaults
     OPENAI_MODEL_NAME: str = "gpt-4o-mini"
+
+    # Linkedin Credentials (for Selenium)
+    LINKEDIN_USERNAME: str
+    LINKEDIN_PASSWORD: str
     
     # Configure .env file loading
     model_config = SettingsConfigDict(
