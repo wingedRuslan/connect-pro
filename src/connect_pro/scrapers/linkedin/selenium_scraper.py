@@ -68,7 +68,7 @@ class SeleniumLinkedInScraper:
 
     def _login(self):
         """Log in to LinkedIn.
-            
+
             Go to LinkedIn login page
             Find and fill the username field
             Find and fill the password field
@@ -110,7 +110,7 @@ class SeleniumLinkedInScraper:
             self.is_logged_in = True
             
         except (TimeoutException, NoSuchElementException) as e:
-            self._quit_driver()
+            self._close_driver()
             raise ValueError(f"Failed to login to LinkedIn: {str(e)}")
 
     def get_profile(self, linkedin_profile_url: str, mock: bool = False) -> Dict:
