@@ -125,6 +125,56 @@ class SeleniumLinkedInScraper:
                 time.sleep(wait_time)
         
         self.last_request_time = time.time()
+    
+    def _extract_basic_profile_data(self) -> Dict:
+        """Extract basic profile information from the current page."""
+        profile_data = {}
+        
+        # Extract full name (the main profile heading)
+        try:
+            profile_data["full_name"] = self.driver.find_element(
+                By.XPATH, "//h1[contains(@class, 'text-heading')]"
+            ).text.strip()
+        except NoSuchElementException:
+            profile_data["full_name"] = ""
+            print("Warning: Could not find full name")
+        
+        # Extract headline (job title/description that appears below the name)
+        try:
+            profile_data["headline"] = self.driver.find_element(
+                By.XPATH, "//div[contains(@class, 'text-body-medium')]"
+            ).text.strip()
+        except NoSuchElementException:
+            profile_data["headline"] = ""
+            print("Warning: Could not find headline")
+        
+        # Extract location (city/country information)
+        try:
+            location_text = self.driver.find_element(
+                By.XPATH, "//span[contains(@class, 'text-body-small') and contains(text(), ',')]"
+            ).text.strip()
+            
+            # Split location into city and country if possible
+            if "," in location_text:
+                parts = [part.strip() for part in location_text.split(",")]
+                profile_data["city"] = parts[0]
+                profile_data["country"] = parts[1]
+            else:
+                profile_data["location"] = location_text
+        except NoSuchElementException:
+            print("Warning: Could not find location")
+        
+        # Extract about/summary section
+        try:
+            about_section = self.driver.find_element(
+                By.XPATH, "//div[./div/div/span/span[text()='About']]/following-sibling::div"
+            )
+            profile_data["summary"] = about_section.text.strip()
+        except NoSuchElementException:
+            profile_data["summary"] = ""
+            print("Warning: Could not find summary section")
+        
+        return profile_data
 
     def get_profile(self, linkedin_profile_url: str, mock: bool = False) -> Dict:
         """Fetch LinkedIn profile data.
@@ -148,8 +198,22 @@ class SeleniumLinkedInScraper:
         
         try:
             self._login()
+
+            # Navigate to the profile URL
+            self.driver.get(linkedin_profile_url)
+
+            # Wait for the profile to load (wait for the name to appear)
+            WebDriverWait(self.driver, 15).until(
+                EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-heading')]"))
+            )
+
+            # Extract basic profile data
+            profile_data = self._extract_basic_profile_data()
             
-            return {"Status": "Success"}
+            return profile_data
+
+        except Exception as e:
+            raise ValueError(f"Failed to scrape LinkedIn profile: {str(e)}")
             
         finally:
             self._quit_driver()
