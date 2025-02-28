@@ -1,6 +1,7 @@
 """LinkedIn profile scraper using Selenium."""
 
 import os
+import time
 from typing import Dict
 
 from selenium import webdriver
@@ -18,7 +19,7 @@ from connect_pro.config.settings import settings
 class SeleniumLinkedInScraper:
     """LinkedIn scraper using Selenium."""
     
-    def __init__(self, username=None, password=None):
+    def __init__(self, username=None, password=None, cooldown_period=60):
         """Initialize the scraper with LinkedIn credentials."""
 
         self.username = username or settings.LINKEDIN_USERNAME
@@ -28,8 +29,9 @@ class SeleniumLinkedInScraper:
             raise ValueError("LinkedIn username and password are required")
         
         self.driver = None          # holds browser instance
-        self.is_logged_in = False   
-    
+        self.is_logged_in = False
+        self.cooldown_period = cooldown_period
+        self.last_request_time = None
 
     def _setup_driver(self) -> None:
         """Create and configure a Chrome browser instance."""
@@ -113,6 +115,17 @@ class SeleniumLinkedInScraper:
             self._close_driver()
             raise ValueError(f"Failed to login to LinkedIn: {str(e)}")
 
+    def _respect_cooldown(self):
+        """Wait for cooldown period between requests to avoid rate limiting."""
+        if self.last_request_time:
+            elapsed_time = time.time() - self.last_request_time
+            if elapsed_time < self.cooldown_period:
+                wait_time = self.cooldown_period - elapsed_time
+                print(f"Waiting {wait_time:.1f} seconds for cooldown...")
+                time.sleep(wait_time)
+        
+        self.last_request_time = time.time()
+
     def get_profile(self, linkedin_profile_url: str, mock: bool = False) -> Dict:
         """Fetch LinkedIn profile data.
         
@@ -125,6 +138,9 @@ class SeleniumLinkedInScraper:
         """
         if mock:
             return {"Full Name": "Test Test", "Status": "Success"}
+
+        # Respect the cooldown period
+        self._respect_cooldown()
 
         # Set up the browser
         if not self.driver:
