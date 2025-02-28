@@ -356,5 +356,5 @@ class SeleniumLinkedInScraper:
             raise ValueError(f"Failed to scrape LinkedIn profile: {str(e)}")
             
         finally:
-            self._quit_driver()
+            self._close_driver()
 
