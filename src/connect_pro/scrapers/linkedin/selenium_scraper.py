@@ -16,6 +16,11 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 
 from connect_pro.config.settings import settings
+from connect_pro.scrapers.linkedin.extractors import (
+    extract_basic_info,
+    extract_experiences,
+    extract_education,
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -176,11 +181,13 @@ class SeleniumLinkedInScraper:
             
             # Wait for the profile to load
             WebDriverWait(self.driver, 15).until(
-                EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-heading-xlarge')]|//h1[contains(@class, 'text-heading')]"))
+                EC.presence_of_element_located((By.XPATH, "//h1"))
             )
 
             # Extract Profile data
-            profile_data = {}
+            profile_data = extract_basic_info(self.driver)
+            profile_data["experiences"] = extract_experiences(self.driver)
+            profile_data["education"] = extract_education(self.driver)
 
             # Update last scrape time
             self._save_last_scrape_time()
@@ -192,4 +199,8 @@ class SeleniumLinkedInScraper:
             
         finally:
             self._close_driver()
+
+    def __del__(self) -> None:
+        """Ensure the driver is closed."""
+        self._close_driver()
 
