@@ -3,6 +3,7 @@ LinkedIn Profile Analyzer: Generates professional summaries and conversation poi
 from LinkedIn profiles through automated search and analysis.
 """
 
+import logging
 from typing import Dict
 
 from dotenv import load_dotenv
@@ -12,8 +13,31 @@ from connect_pro.config.settings import settings
 from connect_pro.llm.models import get_openai_llm
 from connect_pro.prompts.profile_analysis import profile_analysis_prompt
 from connect_pro.schemas.profile_insights import ProfileInsights, profile_parser
-from connect_pro.scrapers.linkedin.proxycurl import LinkedInClient
+from connect_pro.scrapers.linkedin.proxycurl import ProxyCurlClient
+from connect_pro.scrapers.linkedin.selenium_scraper import SeleniumLinkedInScraper
 
+
+logger = logging.getLogger(__name__)
+
+
+def get_linkedin_client():
+    """Get the appropriate LinkedIn client based on settings.
+    
+    Returns:
+        A LinkedIn client instance with compatible interface
+    """
+    scraper_type = getattr(settings, "LINKEDIN_SCRAPER_TYPE", "proxycurl").lower()
+    
+    if scraper_type == "proxycurl":
+        logger.info("Using ProxyCurl LinkedIn client")
+        return ProxyCurlClient()
+    elif scraper_type == "selenium":
+        logger.info("Using Selenium LinkedIn scraper")
+        return SeleniumLinkedInScraper()
+    else:
+        logger.warning(f"Unknown scraper type: {scraper_type}, defaulting to Proxycurl")
+        return ProxyCurlClient()
+    
 
 def generate_profile_insights(
     search_query: str, verbose: bool = False
@@ -33,13 +57,15 @@ def generate_profile_insights(
         linkedin_agent = LinkedInProfileAgent(verbose=verbose)
         profile_url = linkedin_agent.find_profile(search_query=search_query)
         if verbose:
-            print(f"Found LinkedIn profile: {profile_url}")
+            logger.info(f"Found LinkedIn profile: {profile_url}")
 
         if not profile_url:
             return None
 
         # Scrape profile data
-        profile_data = LinkedInClient().get_profile(
+        linkedin_client = get_linkedin_client()
+
+        profile_data = linkedin_client.get_profile(
             linkedin_profile_url=profile_url, mock=True
         )
         if not profile_data:
@@ -58,7 +84,7 @@ def generate_profile_insights(
 
     except Exception as e:
         if verbose:
-            print(f"Error generating profile insights: {str(e)}")
+            logger.info(f"Error generating profile insights: {str(e)}")
         raise
 
 
@@ -66,21 +92,21 @@ def main():
     """Generate insights from LinkedIn profiles."""
     load_dotenv()
 
-    print("\n=== LinkedIn Profile Analyzer ===\n")
+    logger.info("\n=== LinkedIn Profile Analyzer ===\n")
 
     search_query = "Ruslan Yermak IBM"
 
     try:
         result = generate_profile_insights(search_query=search_query, verbose=True)
 
-        print("\nLinkedIn Profile:", result["profile_url"])
-        print("\nProfile Insights:")
-        print(result["insights"])
+        logger.info("\nLinkedIn Profile:", result["profile_url"])
+        logger.info("\nProfile Insights:")
+        logger.info(result["insights"])
 
     except ValueError as e:
-        print(f"Error: {e}")
+        logger.info(f"Error: {e}")
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        logger.info(f"Unexpected error: {e}")
 
 
 if __name__ == "__main__":
