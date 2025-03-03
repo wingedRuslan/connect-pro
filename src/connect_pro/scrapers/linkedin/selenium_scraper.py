@@ -1,7 +1,9 @@
 """LinkedIn profile scraper using Selenium."""
 
-import os
+import logging
 import time
+from datetime import datetime
+from pathlib import Path
 from typing import Dict, List
 
 from selenium import webdriver
@@ -15,11 +17,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from connect_pro.config.settings import settings
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 class SeleniumLinkedInScraper:
     """LinkedIn scraper using Selenium."""
     
-    def __init__(self, username=None, password=None, cooldown_period=60):
+    def __init__(self, username=None, password=None, cooldown_period_sec=120):
         """Initialize the scraper with LinkedIn credentials."""
 
         self.username = username or settings.LINKEDIN_USERNAME
@@ -30,9 +35,42 @@ class SeleniumLinkedInScraper:
         
         self.driver = None          # holds browser instance
         self.is_logged_in = False
-        self.cooldown_period = cooldown_period
-        self.last_request_time = None
 
+        # Cooldown tracking
+        self.cooldown_period_sec = cooldown_period_sec
+        self.last_scrape_time = None
+        self.cooldown_file = Path(".linkedin_cooldown")
+        self._load_last_scrape_time()
+
+    def _load_last_scrape_time(self) -> None:
+        """Load the last scrape time from file."""
+        if self.cooldown_file.exists():
+            try:
+                timestamp = self.cooldown_file.read_text().strip()
+                self.last_scrape_time = datetime.fromisoformat(timestamp)
+                logger.info(f"Last scrape time: {self.last_scrape_time}")
+            except Exception as e:
+                logger.error(f"Error loading last scrape time: {e}")
+                self.last_scrape_time = None
+
+    def _save_last_scrape_time(self) -> None:
+        """Save the current time as the last scrape time."""
+        try:
+            self.last_scrape_time = datetime.now()
+            self.cooldown_file.write_text(self.last_scrape_time.isoformat())
+            logger.info(f"Updated last scrape time: {self.last_scrape_time}")
+        except Exception as e:
+            logger.error(f"Error saving last scrape time: {e}")
+    
+    def _respect_cooldown(self) -> None:
+        """Wait for cooldown period between requests to avoid rate limiting."""
+        if self.last_scrape_time:
+            elapsed_seconds = (datetime.now() - self.last_scrape_time).total_seconds()
+            if elapsed_seconds < self.cooldown_period_sec:
+                wait_time = self.cooldown_period_sec - elapsed_seconds
+                logger.info(f"Waiting {wait_time:.1f} seconds for cooldown...")
+                time.sleep(wait_time)
+    
     def _setup_driver(self) -> None:
         """Create and configure a Chrome browser instance."""
 
@@ -68,64 +106,45 @@ class SeleniumLinkedInScraper:
             self.driver = None
             self.is_logged_in = False
 
-    def _login(self):
-        """Log in to LinkedIn.
 
-            Go to LinkedIn login page
-            Find and fill the username field
-            Find and fill the password field
-            Click the login button
-            Wait until we're redirected to a logged-in page
-        """
+    def _login(self) -> bool:
+        """Log in to LinkedIn."""
         if self.is_logged_in:
-            return
-        
-        if not self.driver:
-            self._setup_driver()
+            return True
         
         try:
             self.driver.get("https://www.linkedin.com/login")
-            
-            # Wait for username field to be visible and enter username
-            username_input = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.ID, "username"))
-            )
-            username_input.send_keys(self.username)
-            
-            # Find password field and enter password
-            password_input = self.driver.find_element(By.ID, "password")
-            password_input.send_keys(self.password)
-            
-            # Click the login button
-            login_button = self.driver.find_element(
-                By.XPATH, "//button[contains(@class, 'login')]"
-            )
-            login_button.click()
-            
-            # Wait for successful login (the URL contains "feed" or "/in/")
-            WebDriverWait(self.driver, 15).until(
-                lambda d: "feed" in d.current_url.lower() or 
-                          "/in/" in d.current_url.lower()
-            )
-            
-            print("Successfully logged in to LinkedIn")
-            self.is_logged_in = True
-            
-        except (TimeoutException, NoSuchElementException) as e:
-            self._close_driver()
-            raise ValueError(f"Failed to login to LinkedIn: {str(e)}")
+            time.sleep(5)
 
-    def _respect_cooldown(self):
-        """Wait for cooldown period between requests to avoid rate limiting."""
-        if self.last_request_time:
-            elapsed_time = time.time() - self.last_request_time
-            if elapsed_time < self.cooldown_period:
-                wait_time = self.cooldown_period - elapsed_time
-                print(f"Waiting {wait_time:.1f} seconds for cooldown...")
-                time.sleep(wait_time)
+            # Enter email
+            email_field = self.driver.find_element(By.ID, "username")
+            email_field.send_keys(self.username)
+            
+            # Enter password
+            password_field = self.driver.find_element(By.ID, "password")
+            password_field.send_keys(self.password)
+            
+            # Click sign in
+            signin_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
+            signin_button.click()
+            
+            # Wait for login to complete
+            time.sleep(5)
+
+            # Check if login was successful
+            if "feed" in self.driver.current_url or "checkpoint" in self.driver.current_url or "/in/" in self.driver.current_url:
+                logger.info(f"Successfully logged in as {self.username}")
+                self.is_logged_in = True
+                return True
+            else:
+                logger.warning(f"Login failed for {self.username}")
+                return False
         
-        self.last_request_time = time.time()
-    
+        except (TimeoutException, NoSuchElementException) as e:
+            logger.error(f"Failed to login to LinkedIn: {str(e)}")
+            return False
+
+
     def _extract_basic_profile_data(self) -> Dict:
         """Extract basic profile information from the current page."""
         profile_data = {}
@@ -330,20 +349,28 @@ class SeleniumLinkedInScraper:
         # Respect the cooldown period
         self._respect_cooldown()
 
-        # Set up the browser
-        if not self.driver:
-            self._setup_driver()
-        
         try:
-            self._login()
+            # Set up the browser
+            if not self.driver:
+                self._setup_driver()
 
-            # Navigate to the profile URL
+            # Attempt login
+            if not self._login():
+                logger.error("Failed to log in to LinkedIn")
+                self._close_driver()
+                return {}
+            
+             # Navigate to the profile
             self.driver.get(linkedin_profile_url)
-
-            # Wait for the profile to load (wait for the name to appear)
+            time.sleep(5)
+            
+            # Wait for the profile to load
             WebDriverWait(self.driver, 15).until(
-                EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-heading')]"))
+                EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-heading-xlarge')]|//h1[contains(@class, 'text-heading')]"))
             )
+
+            # Update last scrape time
+            self._save_last_scrape_time()
 
             # Extract profile data
             profile_data = self._extract_basic_profile_data()
