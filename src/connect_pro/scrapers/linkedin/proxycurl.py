@@ -5,7 +5,7 @@ import requests
 from connect_pro.config.settings import settings
 
 
-class LinkedInClient:
+class ProxyCurlClient:
     """Client for interacting with LinkedIn API via ProxyCurl."""
 
     def __init__(self, api_key: Optional[str] = None):
