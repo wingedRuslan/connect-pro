@@ -5,7 +5,7 @@ from langchain.prompts.prompt import PromptTemplate
 from connect_pro.schemas.profile_insights import profile_parser
 
 PROFILE_ANALYSIS_TEMPLATE = """Based on the following information about a person:
-    {information}
+    {profile_information}
     
     Please provide:
     1. Professional Summary (2-3 sentences highlighting their key achievements and role) 
@@ -22,7 +22,7 @@ PROFILE_ANALYSIS_TEMPLATE = """Based on the following information about a person
     """
 
 profile_analysis_prompt = PromptTemplate(
-    input_variables=["information"],
+    input_variables=["profile_information"],
     template=PROFILE_ANALYSIS_TEMPLATE,
     validate_template=True,  # ensure all input variables are present in the template
     partial_variables={"format_instructions": profile_parser.get_format_instructions()},
