@@ -12,6 +12,7 @@ from connect_pro.agent.linkedin_profile_agent import LinkedInProfileAgent
 from connect_pro.config.settings import settings
 from connect_pro.llm.models import get_openai_llm
 from connect_pro.prompts.profile_analysis import profile_analysis_prompt
+from connect_pro.prompts.common_ground import common_ground_prompt
 from connect_pro.schemas.profile_insights import ProfileInsights, profile_parser
 from connect_pro.scrapers.linkedin.proxycurl import ProxyCurlClient
 from connect_pro.scrapers.linkedin.selenium_scraper import SeleniumLinkedInScraper
@@ -85,6 +86,47 @@ def generate_profile_insights(
     except Exception as e:
         if verbose:
             logger.info(f"Error generating profile insights: {str(e)}")
+        raise
+
+
+def generate_common_ground(
+    profile_url: str, user_information: str, verbose: bool = False
+) -> str:
+    """
+    Generate insights about common ground between a LinkedIn profile and user information.
+
+    Args:
+        profile_url: LinkedIn profile URL
+        user_information: Information provided by the user about themselves
+        verbose: Whether to print detailed progress information
+
+    Returns:
+        Common ground insights as a string
+    """
+    try:
+        # Get Profile Data
+        linkedin_client = get_linkedin_client()
+        profile_data = linkedin_client.get_profile(
+            linkedin_profile_url=profile_url, mock=True
+        )
+        if not profile_data:
+            raise ValueError(f"Could not scrape profile data from {profile_url}")
+
+        # Find out common ground
+        llm = get_openai_llm(temperature=0.5)        
+        chain = common_ground_prompt | llm
+        
+        common_ground = chain.invoke(
+            input={
+                "profile_information": profile_data,
+                "user_information": user_information
+            }
+        )
+        return common_ground.content
+
+    except Exception as e:
+        if verbose:
+            logger.info(f"Error generating common ground: {str(e)}")
         raise
 
 
