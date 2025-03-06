@@ -76,7 +76,7 @@ def generate_profile_insights(
         llm = get_openai_llm(temperature=0)
         chain = profile_analysis_prompt | llm | profile_parser
 
-        insights: ProfileInsights = chain.invoke(input={"information": profile_data})
+        insights: ProfileInsights = chain.invoke(input={"profile_information": profile_data})
 
         return {
             "profile_url": profile_url, 
