@@ -67,7 +67,7 @@ def generate_profile_insights(
         linkedin_client = get_linkedin_client()
 
         profile_data = linkedin_client.get_profile(
-            linkedin_profile_url=profile_url, mock=True
+            linkedin_profile_url=profile_url, mock=False
         )
         if not profile_data:
             raise ValueError(f"Could not scrape profile data from {profile_url}")
@@ -107,7 +107,7 @@ def generate_common_ground(
         # Get Profile Data
         linkedin_client = get_linkedin_client()
         profile_data = linkedin_client.get_profile(
-            linkedin_profile_url=profile_url, mock=True
+            linkedin_profile_url=profile_url, mock=False
         )
         if not profile_data:
             raise ValueError(f"Could not scrape profile data from {profile_url}")
