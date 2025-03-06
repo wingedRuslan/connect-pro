@@ -2,6 +2,9 @@
 
 ConnectPro is an intelligent networking assistant that analyzes LinkedIn profiles to generate personalized conversation starters and insights. It crafts more meaningful and engaging networking interactions by providing tailored discussion points based on a person's story and professional background. 
 
+![ConnectPro GiF](./images/example_app.gif)
+
+
 ### Features
 
 - :mag: Smart LinkedIn profile search using name, company, or position
@@ -99,3 +102,9 @@ The project uses several development tools:
 - mypy for type checking
 - pytest for testing
 
+
+### Linkedin Profile Analyzer
+
+Example of the Linkedin Profile Analyzer Outputs:
+
+![Linkedin Profile Analyzer Output](./images/example_result_output.png)
